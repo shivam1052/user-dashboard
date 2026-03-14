@@ -9,12 +9,16 @@ export const userStore = create((set) => ({
 
   getUser: async () => {
     try {
+      set({ loading: true });
       const res = await axiosInstance.get("/users");
       // console.log(res.data);
-      set({ users: res.data });
+      setTimeout(() => {
+        set({ users: res.data, loading: false });
+      }, 1000);
       toast.success("Users fetched successfully");
     } catch (error) {
-      toast.error("Error in fetching users");
+      set({ loading: false, error: "Failed to fetch users" });
+      toast.error("Error fetching users");
     }
   },
 }));
