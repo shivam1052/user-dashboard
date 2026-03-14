@@ -4,7 +4,7 @@ const App = () => {
   return (
     <>
       <Toaster position="top-right" reverseOrder={false} />
-      <Dashboard />;
+      <Dashboard />
     </>
   );
 };

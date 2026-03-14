@@ -18,8 +18,8 @@ const Dashboard = () => {
   );
 
   return (
-    <div className="p-6">
-      <h1 className="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+    <div className="p-6 min-h-screen bg-gray-900 text-gray-200">
+      <h1 className="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-pulse">
         User Dashboard
       </h1>
 
@@ -29,7 +29,7 @@ const Dashboard = () => {
           placeholder="Search user"
           className="w-full max-w-md px-4 py-2 border rounded-lg shadow-sm 
                focus:outline-none focus:ring-2 focus:ring-blue-400 
-               transition"
+               transition bg-gray-800 text-gray-200 border-gray-700"
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
@@ -51,7 +51,7 @@ const Dashboard = () => {
         ) : error ? (
           <p className="text-red-500 text-center col-span-3">{error}</p>
         ) : (
-          <p className="text-gray-500 text-center col-span-3">No users found</p>
+          <p className="text-gray-400 text-center col-span-3">No users found</p>
         )}
       </div>
 

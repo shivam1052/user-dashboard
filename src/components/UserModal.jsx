@@ -3,10 +3,10 @@ import { RxCross2 } from "react-icons/rx";
 
 const UserModal = ({ user, onClose }) => {
   return (
-    <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 backdrop-blur-xs">
-      <div className="bg-white w-[500px] rounded-lg shadow-lg p-6 relative">
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 backdrop-blur-xs">
+      <div className="bg-gray-800 text-gray-200 w-[500px] rounded-lg shadow-lg p-6 relative">
         <button
-          className="absolute top-2 right-3 text-xl font-bold cursor-pointer text-red-500"
+          className="absolute top-2 right-3 text-xl font-bold cursor-pointer text-red-400"
           onClick={onClose}
         >
           <RxCross2 size={28} />
@@ -14,7 +14,7 @@ const UserModal = ({ user, onClose }) => {
 
         <h2 className="text-2xl font-bold mb-4">{user.name}</h2>
 
-        <div className="space-y-2">
+        <div className="space-y-2 text-gray-300">
           <p>
             <b>Username:</b> {user.username}
           </p>
@@ -29,7 +29,7 @@ const UserModal = ({ user, onClose }) => {
           </p>
 
           <div className="mt-4">
-            <h3 className="font-semibold text-lg">Address</h3>
+            <h3 className="font-semibold text-lg text-white">Address</h3>
             <p>{user.address.street}</p>
             <p>{user.address.suite}</p>
             <p>{user.address.city}</p>
@@ -37,7 +37,7 @@ const UserModal = ({ user, onClose }) => {
           </div>
 
           <div className="mt-4">
-            <h3 className="font-semibold text-lg">Company</h3>
+            <h3 className="font-semibold text-lg text-white">Company</h3>
             <p>
               <b>Name:</b> {user.company.name}
             </p>
