@@ -1,14 +1,6 @@
-import { useState, useEffect } from "react";
-import { userStore } from "./store/userStore.js";
+import Dashboard from "./pages/Dashboard.jsx";
 const App = () => {
-  const { users, getUser } = userStore();
-
-  useEffect(() => {
-    getUser();
-  }, []);
-
-  console.log(users.length);
-  return <div>App</div>;
+  return <Dashboard />;
 };
 
 export default App;
